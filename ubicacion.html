@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="style1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ubicacion</title>
+
+</head>
+<body>
+  
+  <div class="header col-xs-12 margincero " >
+    <div class="row colorbackground_white">
+        <div class="row align-items-center">
+            <div class="col-2 text-center"  >
+                
+                <img src="img/tres_barritas.png" alt="">
+
+            </div>
+            <div class="col-8 text-center" >
+                <img src="img/littleceasarlogomodernodimensionadostaticheader.png" alt="Descripción de la imagen">
+            </div>
+            <div class="col-2 text-center" >
+                
+                    <img src="img/icono_bolsito.PNG" alt="">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+  <h1 class="text-center">Encuentranos</h1>
+  <div class="container_perso">
+    
+    <div id="map"></div>
+    <div id="search-container">
+        <input type="text" id="search" placeholder="Buscar un lugar">
+    </div>
+  </div>
+
+  <script>
+    var map;
+    var placesService;
+    var autocomplete;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 40.7128, lng: -74.0060 }, // Coordenadas iniciales
+        zoom: 12
+      });
+
+      placesService = new google.maps.places.PlacesService(map);
+
+      var searchInput = document.getElementById('search');
+      autocomplete = new google.maps.places.Autocomplete(searchInput);
+
+      autocomplete.addListener('place_changed', function () {
+        var place = autocomplete.getPlace();
+        if (place.geometry) {
+          map.setCenter(place.geometry.location);
+          map.setZoom(14); // Ajustar el nivel de zoom
+        } else {
+          alert('No se encontraron resultados.');
+        }
+      });
+    }
+
+  </script>
+      <footer >
+
+
+
+        <div class="row  topmargin15px align-items-center">
+
+            <div class="text-center align-items-center col-lg-1 col-md-1 d-none d-md-block" >
+                    
+            
+            </div>
+                
+                <div class="text-center align-items-center col-lg-3 col-md-3 d-none d-md-block" >
+                    
+                        <img class="iconito   "  src="img/facebook-round-svgrepo-com.svg">
+                        <img class="iconito" src="img/twitter-round-svgrepo-com.svg">
+                        <img class="iconito"   src="img/instagram-round-svgrepo-com.svg">
+                        <img class = "iconito"    src="img/youtube-round-svgrepo-com.svg">
+                    
+                </div>
+                <div class=" col-lg-6 col-md-5 d-none d-md-block text-end" >
+                    <p>
+                        Haz tu pedido para nuestra app movil
+                    </p>
+                </div>
+                <div class=" col-lg-2 col-md-3 d-none d-md-block text-center" >
+                    <img class="iconito"  src="img/google-play-style-svgrepo-com.svg">
+                    <img class="iconito"  src="img/app-store-svgrepo-com.svg">
+                </div>
+
+                <div class=" d-md-none col-sm-4 text-center" >
+                                       
+                    <img class="iconito   "  src="img/facebook-round-svgrepo-com.svg">
+                    <img class="iconito" src="img/twitter-round-svgrepo-com.svg">
+                    <img class="iconito"   src="img/instagram-round-svgrepo-com.svg">
+                    <img class = "iconito"    src="img/youtube-round-svgrepo-com.svg">
+
+                </div>
+                <div class=" d-md-none col-sm-5 text-center margincero" >
+                    <p>
+                        Haz tu pedido para nuestra app movil
+                    </p>                
+                </div>
+                <div class=" d-md-none col-sm-3 text-center">
+                    <img class="iconito"  src="img/google-play-style-svgrepo-com.svg">
+                    <img class="iconito"  src="img/app-store-svgrepo-com.svg">
+                </div>
+
+        </div>
+
+
+        <div class="row topmargin15px text-center">
+            <div class="col-md-6">
+                <h6>Politica de privacidad</h6>
+            </div>
+
+            <div class="col-md-6" >
+                <h6>Terminos de servicio</h6>
+            </div>
+        </div>
+        
+        <div class="row topmargin15px text-center">
+            <div class="col-xs-3">
+
+            </div>
+            <div class=" col-xs-6 text-center">
+                <p>©2003-2023 Little Caesar Enterprises, Inc. Reservados todos los derechos. El nombre, los logotipos y las marcas 
+                    relacionadas con Little Caesars Pizza son marcas comerciales registradas de Little Caesar Enterprises, Inc.</p>
+            </div>
+        </div>
+
+        <div class="row topmargin15px text-center">
+            <div class="col-xs-3">
+                
+            </div>
+            <div class=" col-xs-6 text-center">
+                Si usas un lector de pantalla y tienes dificultades, llama al 1-800-668-0472.
+            </div>
+        </div>
+
+        <div class="row topmargin15px text-center">
+            <div class="col-xs-3">
+                
+            </div>
+            <div class=" col-xs-6 text-center">
+                Este sitio está protegido por el sistema reCAPTCHA de Google y tanto la Política de Privacidad como los Términos del Servicio de Google son aplicables.
+            </div>
+        </div>
+
+
+    </footer>
+  
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLcBwhJVFACPkq-GQybdYcqBImRJY7CCQ&libraries=places&callback=initMap"></script>
+</body>
+</html>

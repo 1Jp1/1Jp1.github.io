@@ -65,3 +65,20 @@ label {
     padding: 10px 20px;
     cursor: pointer;
 }
+
+#map {
+    height: 60vh;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  #search-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #search {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+  }

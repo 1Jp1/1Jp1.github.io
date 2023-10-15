@@ -1,0 +1,67 @@
+/*.arriba1{
+    display: flex;
+    background-color: blue;*
+    justify-content: space-between;
+
+
+}*/
+
+
+
+.img_auto{
+    width: 100%;
+    max-height: 375px;
+}
+
+.topmargin15px{
+    margin-top: 15px;;
+}
+
+.iconito{
+    width: 27px;
+    height: 27px;
+}
+
+.container_perso {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label,
+.input-group input,
+.input-group select {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    display: block;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

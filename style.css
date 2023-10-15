@@ -202,17 +202,40 @@ body {
     max-height: 300px;
     height: auto;
 }
-#mensaje_tiendamascercana{
+.mensaje_tiendamascercana{
     background-color: white;
     min-height: 100px;
     max-width: 500px;
+    border-top-right-radius: 10px; /* Radio superior derecho */
+    border-bottom-right-radius: 10px; /* Radio inferior derecho */
 
 }
-#mensaje_tiendamascercanasm{
+.mensaje_tiendamascercana:hover {
+    background-color: black; /* Nuevo color de fondo en hover */
+    color: #fff; /* Nuevo color de texto en hover */
+  }
+
+.mensaje_tiendamascercanasm{
     background-color: white;
     height: 80px;
     
 
+}
+.mensaje_tiendamascercanasm:hover {
+    background-color: black; /* Nuevo color de fondo en hover */
+    color: #fff; /* Nuevo color de texto en hover */
+    border-top-right-radius: 10px; /* Radio superior derecho */
+    border-bottom-right-radius: 10px; /* Radio inferior derecho */
+  }
+
+.tienda_redondeo{
+    background-color: white;
+    border-top-right-radius: 10px; /* Radio superior derecho */
+    border-bottom-right-radius: 10px; /* Radio inferior derecho */
+}
+.tienda_redonde:hover{
+    background-color: black; /* Nuevo color de fondo en hover */
+    color: #fff; /* Nuevo color de texto en hover */
 }
 
 .width_1100px{
@@ -336,3 +359,47 @@ body {
     width: 27px;
     height: 27px;
 }
+
+
+.enlace-personalizado {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #333; /* Cambia el color del texto del enlace a tu preferencia */
+    /* Otros estilos según tus preferencias */
+  }
+  
+.container10 {
+    position: relative;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.menu-item {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#menu-toggle:checked + #imagen-label + .menu {
+    display: block;
+}
+
+.img-hover-effect:hover {
+    transition: 0.3s;
+    transform: scale(1.1); /* Aumento del 10% */
+}
+

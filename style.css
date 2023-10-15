@@ -195,7 +195,7 @@ body {
 }
 
 .width_1100px{
-    min-width: 1150px;
+    min-width: 1100px;
     
 }
 
@@ -209,21 +209,26 @@ body {
     margin-right: 0px;
     padding-right: 0px;
     height: 210px;
-    width: 210px;
+    max-width: 210px;
+    width: auto;
+    min-width: 0px;
 
 }
 .titulo_cuadrado{
     height: 22px;
-    width: 210px;
+    max-width: 210px;
+    width: auto;
     margin-left: 0px;
     padding-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
 }
 .cuadrado_restante{
+
     margin-left: 0px;
     margin-right: 0px;
-    width:210px;
+    max-width:210px;
+    width: auto;
     height: 188px;
 }
 
@@ -255,16 +260,53 @@ body {
     padding-left: 0px;
 }
 
-.container2 {
+
+.contenedor3 {
+    display: grid;
+    grid-template-columns: repeat(5, 210px); /* Tamaño fijo de 210px por div */
+    grid-gap: 10px; /* Espacio entre los divs */
+    max-width: 1100px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    overflow: auto; /* Agrega desbordamiento en pantallas más pequeñas */
+}
+.contenedor3 div{
     width: 100%;
-    /* Add horizontal scrollbar if necessary */
-    white-space: nowrap; /* Prevent line breaks */
+}
+.contenedor_afuera {
+    max-width: 1100px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor en pantallas más grandes */
 }
 
-.item {
-    display: inline-block;
-    width: 210px;
-    height: 210px;
-    background-color: #f0f0f0;
-    
+.contenerdor_adentro{
+    display: grid;
+    grid-template-columns: repeat(5, 210px); /* Tamaño fijo de 210px por div */
+    grid-gap: 10px; /* Espacio entre los divs */
+    overflow-x: auto;
+}
+
+.contenerdor_adentro div {
+     /* Color de fondo, puedes cambiarlo */
+    width: 100%; /* Ocupa el 100% del espacio disponible en la celda */
+}
+
+.contenedor {
+    justify-content: center; 
+    display: flex;
+    overflow-x: auto; /* Agrega desbordamiento horizontal en pantallas más pequeñas */
+}
+
+.contenedor div {
+    width: 210px; /* Tamaño fijo de 210px por div */
+    min-width: 210px;
+     /* Color de fondo, puedes cambiarlo */
+    margin-right: 10px; /* Espacio entre los divs */
+}
+
+.contenedor div:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último div */
+}
+@media (max-width: 1100px) {
+    .contenedor {
+        justify-content: flex-start; /* Alinea a la izquierda en pantallas más pequeñas */
+    }
 }

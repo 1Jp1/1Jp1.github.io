@@ -403,3 +403,15 @@ body {
     transform: scale(1.1); /* Aumento del 10% */
 }
 
+body {
+    font-family: Anton;
+}
+
+.p_white{
+    color: white;
+}
+
+.p_grande{
+    font-size: 50px;
+}
+  
